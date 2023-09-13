@@ -1,0 +1,691 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset238 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang31 // Mouse Eventleri\par
+\par
+// D\'f6g\'fcler\par
+\par
+const langs = ["Python","Javascript","Java"];\par
+\par
+// let index = 0;\par
+// while(index >langs.length)\{\par
+//     console.log(langs[index]);\par
+// \}\par
+\par
+// // for d\'f6ng\'fcs\'fc daha k\f1\u305?sa \par
+\par
+// for(let index = 0;index < langs.length; index++)\par
+// \{\par
+//     console.log(langs[index]);\par
+// \}\par
+\par
+// // Foreach\par
+\par
+// langs.forEach((lang) => \{\par
+//     console.log(lang);\par
+\par
+// \})\par
+\par
+// MAP FONKS\u304?YONU\par
+\par
+// Belirli bir arrayi ba\'baka bir arraya d\f0\lang1033\'f6n\'fc\f1\'bat\f0\'fcrmek\par
+\par
+// const users = [\par
+//     \{name : "Arif", age : 32\},\par
+//     \{name : "K\'fcbra", age : 32\},\par
+//     \{name : "Emir", age : 2\},\par
+\par
+// ]\par
+\par
+// const names = users.map((user) => \{\par
+//     return user.name;\par
+// \});\par
+\par
+// // Yeni De\f1\u287?er =  [arif,k\f0\'fcbra,emir]\par
+\par
+// // \f1\'aaimdi ise sadece ya\'ba key de\u287?erlerinden yeni bir array olu\'batural\u305?m\par
+\par
+// const user  = users.map(() =>\{\par
+//     return user.age;\par
+// \})\par
+\par
+// // Yeni de\u287?er  = [32,32,2]\par
+\par
+// // FOR \u304?N D\f0\'d6NG\'dcS\'dc \par
+\par
+// // Bir obje yap\f1\u305?s\u305?n\u305?n\u305? d\f0\'fc\f1\'ba\f0\'fcnecek olursak ayr\f1\u305? ayr\u305? olarak hem key hemde value de\u287?erlerini ele alabilmemize imkan sa\u287?lamaktad\u305?r.\par
+\par
+// const userOne = \{\par
+//     name : "Arif",\par
+//     age : 32\par
+\par
+// \}\par
+\par
+// for( let key in user)\{\par
+//     console.log(key,user[key]);\par
+// \}\par
+\par
+// key anahtar de\u287?erlerde iterasyon yapacak   = name,age\par
+// user[key] ise objenin anahtarlar\u305?n\u305?n valuelar\u305?nda iterasyon yapacakt\u305?r.\par
+\par
+//  W\u304?NDOW OBJES\u304?\par
+\par
+\par
+// const cevap = confirm("Emin misiniz ? ");\par
+\par
+// console.log(cevap);\par
+//  Kullan\u305?c\u305?ya alert \'baeklinde soru sormak,\par
+//  Kullan\u305?c\u305? e\u287?erki tamam butonuna t\u305?klarsa cevap true olarak set edilecektir. Dolay\u305?s\u305?yla bunuda kontrol edebiliriz.Dolay\u305?s\u305?yla\par
+// iptale basarsa false de\u287?erine set edielcektr.\par
+//  if(cevap)\{\par
+//     console.log("silin");\par
+//  \}else\{\par
+//     console.log("silmeyin");\par
+//  \}\par
+\par
+//  Hem soru sorup hemde ayn\u305? kutucuk i\f0\'e7erisinde soru cevab\f1\u305?n\u305?n irilece\u287?i input olu\'baturmak i\f0\'e7in\par
+\par
+// Prompt\par
+\par
+// const cevap2 = prompt("2+2 = ?");\par
+// console.log(cevap2);\par
+\par
+// value = window;\par
+\par
+// value = window.location;\par
+// value = window.location.host;\par
+// value = window.location.hostname;\par
+// value = window.location.port;\par
+// value = window.location.href;\par
+\par
+\par
+// taray\f1\u305?c\u305?n\u305?n toplam y\f0\'fcksekli\f1\u287?i ancak o anki y\f0\'fckseklik k\'fc\'e7\'fclt\'fcld\'fc\f1\u287?\f0\'fcnde o anki y\'fckseklik ebat\f1\u305?n\u305? al\u305?r.\par
+// value = window.outerHeight;\par
+\par
+// tary\u305?c\u305?n\u305?n toplam geni\'bali\u287?\u287?i o anki geni\'bali\u287?idir.\par
+\par
+// value = window.outerWidth;\par
+// taray\u305?c\u305?n\u305?n \f0\'e7er\'e7evelerini saymadan o anki geni\f1\'bali\u287?i \par
+// value = window.innerWidth;\par
+// taray\u305?c\u305?n\u305?n \f0\'e7er\'e7evelerini saymadan o anki y\'fcksekli\f1\u287?i \par
+// value = window.innerHeight;\par
+\par
+\par
+// value = window.scrollX; // Scrollbar\u305?n yatayda ne kadar piksel hareket etti\u287?i\par
+// value = window.scrollY; // scrollbar\u305?n yukar\u305? a\'baa\u287?\u305? ne kadar piksel hareket etti\u287?i\par
+\par
+\par
+// Scope Kavram\u305?\par
+// Global Scope  : Herhangi bir fonksiyon ve kod blogu i\f0\'e7erisinde olmayan aland\f1\u305?r.\par
+// var value1 = 10;\par
+\par
+// let value2 = 20;\par
+\par
+// const value3 = 30;\par
+\par
+\par
+// function fun()\{\par
+//     var value1 = 40;\par
+//     let value2=50;\par
+//     const value3 = 60;\par
+// \}\par
+\par
+// fonksiyon scobe i\f0\'e7erisinde tan\f1\u305?mlanan  de\u287?i\'bakenler fonksiyona \f0\'f6zg\'fc olarak bellekte yer tutarlar.\par
+// fonksiyon \'e7al\f1\u305?\'ba\u305?p i\'ba s\f0\'fcrecini tamamlad\f1\u305?ktan sonra de\u287?i\'bakenler bellekten kaybolur ve yer tutmazlar.\par
+// Globalde tan\u305?mlanan de\u287?i\'bakenler ise global olarak her yerde kullan\u305?labilirler ve ona g\f0\'f6re bellekte yer tutarlar.\par
+\par
+\par
+\par
+\par
+// Function Scope  : Fonksiyon i\'e7erisindeki alan\par
+\par
+\par
+// Block scope :  \f1\u304?f veya kod bloklar\u305? i\f0\'e7erisi\par
+\par
+\par
+// \'d6NEML\f1\u304? NOT : var keyword\f0\'fc ile blok scope i\'e7erisinde olu\f1\'baturulan de\u287?i\'bakenler globaldede varl\u305?\u287?\u305?n\u305? s\f0\'fcrd\'fcr\'fcrler ve bellekte yer tutmaya devam ederler.\par
+// Ancak let ve const keywordleri ile tan\f1\u305?mlanan de\u287?i\'bakenler ise globalde varl\u305?klar\u305?n\u305? s\f0\'fcrd\'fcremezler ve bellekten silinirler.\par
+\par
+// DOCUMENT OBJES\f1\u304?\par
+\par
+value = document;\par
+// t\f0\'fcm html elementleri\par
+value = document.all;  \par
+// t\'fcm html elementlerinin karakter say\f1\u305?s\u305?\par
+// value = document.all.length;\par
+\par
+// value = document.all[document.all.length -1]; // son html tagi\par
+\par
+\par
+// Document objesi i\f0\'e7erisinde foreach fonksiyonu kullan\f1\u305?larak gezilemez, illa bir d\f0\'f6ng\'fc ile gezilecekse\par
+// bu d\'f6ng\'fc for d\'f6ng\'fcs\'fc olmal\f1\u305?d\u305?r.\par
+\par
+// peki foreach ile gezmek istersek ne yapmal\u305?y\u305?z. document objesini array'e \f0\'e7evirmeliyiz.\par
+\par
+const collections = Array.from(value);\par
+\par
+// document.body  -> body elementine ula\f1\'bat\u305?k\par
+// document.head; -> head etiketine ula\'bat\u305?k.\par
+\par
+// document.URL; sayfan\u305?n o anki bulundu\u287?u url adresini \par
+\par
+// Html sayfas\u305?ndaki script taglerini se\f0\'e7mek;\par
+\par
+\par
+// Scriptler\par
+\par
+// Sayfada ka\'e7 script var \par
+\par
+value = document.scripts.length;\par
+\par
+// T\'fcm scriptleri se\'e7mek ;\par
+\par
+value = document.scripts;\par
+\par
+\par
+// sayfadaki t\'fcm linkleri se\'e7elim.\par
+\par
+value = document.links;\par
+\par
+// \f1\u304?lk linki se\f0\'e7elim;\par
+\par
+value = document.links[0];\par
+\par
+// Son linki se\'e7elim.;\par
+value = document.links[document.links.length -1];\par
+\par
+\par
+\par
+\par
+// Son linkin class'\f1\u305?n\u305? se\f0\'e7elim. \par
+\par
+console.log(value.getAttribute("class"));\par
+    // \f1\u304?kinci class se\f0\'e7me y\'f6ntemi\par
+value.className;\par
+\par
+\par
+// Son linkin href'ini se\'e7elim.\par
+// Birinci y\'f6ntem\par
+value.href;\par
+// ikinci y\'f6ntem;\par
+\par
+value.getAttribute("href");\par
+\par
+// getAttribute ve className ile se\'e7ilen classlar toplu olarak birbirinden ayr\f1\u305?lmam\u305?\'ba string de\u287?er olarak d\f0\'f6nmektedir.Array\par
+// peki birden fazla class\f1\u305? olan bir etiketin ayr\u305? ayr\u305? classlar\u305?n\u305? ele almak istersek ne yapmal\u305?y\u305?z.\par
+// classList methodunu kullanarak bir array i\f0\'e7erisinde classlar\f1\u305? birbirinden ayr\u305?lm\u305?\'ba bir \'baekilde alabiliriz\par
+\par
+value.classList;\par
+\par
+\par
+// Form elementini se\f0\'e7mek\par
+\par
+// value = document.forms;\par
+\par
+// document.forms.length;\par
+\par
+// formun bir name attribute'u varsa \par
+\par
+// document.forms["form"];\par
+\par
+// bir formun methodunu se\'e7elim.\par
+\par
+\par
+// DOCUMENT ELEMENTLER\f1\u304? SE\f0\'c7MEK \par
+\par
+// \f1\u304?D'YE G\f0\'d6RE ELEMENT SE\'c7MEK.\par
+\par
+//  let element;\par
+\par
+//  element = document.getElementById("todo-form");\par
+//  element = document.getElementById("task-title");\par
+\par
+ // Element Class'a g\'f6re se\'e7mek\par
+\par
+//  element = document.getElementsByClassName("list-group-item");\par
+\par
+ // Element Tag'a g\'f6re se\'e7mek\par
+\par
+//  element = document.getElementsByTagName("div");\par
+\par
+\par
+ // QuerySelector ile element se\'e7mek\par
+  \par
+//element = document.querySelector("#todo-form");\par
+\par
+// querySelector sadece tek bir elementi se\'e7ebiliriz, ister id ister class isterseniz tag ismine g\'f6re elementleri se\'e7ebiliriz.\par
+\par
+// di\f1\u287?er se\f0\'e7ivilere g\'f6re daha kullan\f1\u305?\'bal\u305?d\u305?r.\par
+\par
+// QuerySelector ile \f0\'e7oklu element se\'e7imi\par
+\par
+// elements = document.querySelectorAll(".list-group-item"); \par
+// Yukar\f1\u305?da da g\f0\'f6r\'fclece\f1\u287?i \f0\'fczere list-group-\f1\u305?tem class\u305?na sahip olan t\f0\'fcm elementler se\'e7ilecektir.\par
+\par
+// querySelectorAll ile se\'e7ilen \'e7okl\f1\u305? elementler NodeList olarak d\f0\'f6nmektedir. NodeList'ler \'fczerinde foreach d\'f6ng\'fcs\'fc ile gezinebilinir.\par
+\par
+// const element = document.querySelector("#clear-todos");\par
+\par
+// console.log(element.id);\par
+// console.log(element.className);\par
+// console.log(element.classList);\par
+// console.log(element.textContent); // etiket i\'e7erisindeki texti al\f1\u305?r.\par
+\par
+// Style ve Element attribute'lerini de\u287?i\'batirmek\par
+\par
+// element.className = "btn btn-danger";  \par
+\par
+// element.style.color ="#000";\par
+// element.style.marginleft = "20px";\par
+// element.href= "{{\field{\*\fldinst{HYPERLINK https://wwww.google.com.tr }}{\fldrslt{https://wwww.google.com.tr\ul0\cf0}}}}\f1\fs22 ";\par
+\par
+// element.target = "_blank";\par
+// elementin textini de\u287?i\'batirdik\par
+// element.textContent = "silin";\par
+// Peki yine textContent kullanarak element i\f0\'e7ine element eklemek istersek;\par
+// bu sefer ekledi\f1\u287?miiz element text olarak g\f0\'f6r\'fcnecektir. Bu nedenle dinamik bir element ekleyeceksek\par
+// textContent methodunu de\f1\u287?il innerHTML methodunu kullanmam\u305?z gerekmektedir.\par
+\par
+// \'aaimdi se\f0\'e7ti\f1\u287?imiz elementi css \f0\'f6zelliklerini de\f1\u287?i\'batirelim yeni bir style ekleyelim.\par
+\par
+// const elements = document.querySelectorAll(".list-group-item");\par
+// elements.forEach((element) => \{\par
+    // element.style.color = "red"; // text rengini red yapt\u305?k\par
+    // element.style.background = "#eee"; // se\f0\'e7ili textlerin arkaplan rengini gri yapt\f1\u305?k\par
+// \})\par
+\par
+\par
+// Peki biz b\f0\'fct\'fcn .list-group-item class'\f1\u305?na sahip li etiketlerini de\u287?ilde sadece belirli index s\u305?ras\u305?nda yer alan \par
+// li etiketlerini de\u287?i\'batirmek istersek ne yapmal\u305?y\u305?z. ? \par
+\par
+// \u304?lk li elementini se\f0\'e7mek;\par
+\par
+//let element2 = document.querySelector("li");\par
+\par
+// ikinci li elementini se\'e7mek;\par
+//document.querySelector("li:nth-child(2)");\par
+// \'fc\'e7\'fcnc\'fc li elementini se\'e7mek;\par
+//document.querySelector("li:nth-child(3)");\par
+\par
+// Tek say\f1\u305?l\u305? index'e sahip elementleri se\f0\'e7mek\par
+\par
+//document.querySelectorAll("li:nth-child(odd)");\par
+\par
+// \'c7ift say\f1\u305?l\u305? index'e sahip elementleri se\f0\'e7mek\par
+\par
+//document.querySelectorAll("li:nth-child(even)");\par
+\par
+\par
+// Herhangi bir elementi se\'e7tikten sonra i\'e7erisindeki \'e7ocuklar\f1\u305? se\f0\'e7mek i\'e7iN;\par
+\par
+//let newTag = document.querySelector(".list-group");\par
+\par
+// Ul etiketi se\'e7ildi ve \f1\'baimdi ise onun i\f0\'e7erisinde yer alan t\'fcm li etiketlerini se\'e7elim. \par
+//newTag.childNodes;\par
+// childNodes bize hemen i\'e7erisinde yer alan li etiketlerini hemde html sayfas\f1\u305?nda e\u287?er sat\u305?r atlan\u305?lm\u305?\'ba ise bu sat\u305?r atlamalar\u305?n\u305? da \par
+// Bu da mant\u305?kl\u305? bir y\f0\'f6ntem olmayacakt\f1\u305?r bu nedenle children methodunu kullan\u305?rsak sadece etiketleri se\f0\'e7ecektir.\par
+\par
+//newTag.children;\par
+\par
+// \f1\'baimdi ise bu \f0\'e7ocuklardan birincisini ikincisini se\'e7elim.Array\par
+\par
+//newTag.children[1];\par
+\par
+// sonuncusunu se\'e7elim \par
+//newTag.children[newTag.length - 1 ];\par
+\par
+// d\'f6k\'fcman etiketleri  \'fczerinde gezinirken. \'f6rne\f1\u287?in ul i\f0\'e7erisinde yer \par
+// alan li etiketleri ul'nin \'e7ocuklar\f1\u305?, li'nin i\f0\'e7erisinde yer alan etiketler ise li etiketinin \'e7ocuklar\f1\u305?d\u305?r. yani \par
+// li etiketinin \f0\'e7ocuklar\f1\u305?n\u305? se\f0\'e7ebilmek i\'e7in \'f6ncelikle base etiket olan ul etiketininin \'e7ocuklar\f1\u305?n\u305?, daha sonra ise bu \f0\'e7ocuklar i\'e7erisinde yer alan  etiketlerin \'e7ocuklar\f1\u305?na \par
+// ula\'baabilmek i\f0\'e7in ise li etiketlerinden herhangi birinin \'e7ocuklar\f1\u305? ile birlikte se\f0\'e7im yapabilir ve \'e7ocuklar\f1\u305? \f0\'fczerinde gezinebilir, d\'f6ng\'fc kurabilir man\'fcp\'fclasyon yapabiliriz.Array\par
+\par
+// Base/ parent yani anne elementi se\'e7tikten sonra daha k\f1\u305?sa yol ile de herhangi bir \f0\'e7ocu\f1\u287?unu se\f0\'e7ebiliriz.\par
+\par
+// newTag.firstElementChild();  yl i\'e7erisinde eyr alan ilk li etiketini se\'e7ecektir.\par
+\par
+// newTag.lastElementChild() ul i\'e7erisinde yer alan son li etiketini se\'e7ecektir.\par
+\par
+// Peki en d\f1\u305?\'ba elementten en i\f0\'e7 elemente kadar gitmeyi \'f6\f1\u287?rendi\u287?imize g\f0\'f6re tam tersi durumlarda parentElementler \'fczerinde nas\f1\u305?l gezinebiliriz ? \par
+\par
+// newTag = ul etiketidir\par
+// \'baimdi parent elementi se\f0\'e7elim . ul'nin parent'\f1\u305?\par
+\par
+//newTag.parentElement;\par
+// onunde bir \f0\'fcst parent'\f1\u305?n\u305? se\f0\'e7mek i\'e7in tekrardan parentElement methodunu kullan\f1\u305?r\u305?z.\par
+//newTag.parentElement.parentElement;\par
+\par
+// ELement karde\'balerini bulma ve se\f0\'e7mek \par
+\par
+//newTag.previousElementSibling;  // kendisinden bir \'f6nceki karde\f1\'ba elementine ge\f0\'e7er ve se\'e7er.\par
+//newTag.nextElementSibling;  // kendisinden bir sonraki karde\f1\'ba elementine ge\f0\'e7er ve se\'e7er.\par
+\par
+\par
+\par
+// peki bir sonraki de\f1\u287?il iki s\u305?ra sonras\u305?na nas\u305?l gideriz ? \par
+// mant\u305?ken iki kez previousElementSibling veya nextElementSibling kullanmak gerekmektedir. Yukar\u305?da da belirtildi\u287?i \f0\'fczere her \'e7al\f1\u305?\'bat\u305?r\u305?lmas\u305?nda bir \f0\'f6nceki veya bir sonrakini se\'e7iyor.\par
+\par
+\par
+\par
+// D\f1\u304?NAM\u304?K ELEMENT OLU\'aaTURMAK\par
+\par
+// Yeni olu\'baturaca\u287?\u305?m\u305?z elementti bir card-body class\u305?na sahip div elementi i\f0\'e7erisine ekleyece\f1\u287?iz bu nedenle card-body classl\u305? elementi se\f0\'e7meliyiz.\par
+\par
+\par
+//const newLink = document.createElement("a");\par
+\par
+//const cardBody = document.getElementsByClassName("card-body")[0];\par
+\par
+\par
+//newLink.id = "clear-todos";\par
+//newLink.className = "btn btn-danger";\par
+//newLink.href = "{{\field{\*\fldinst{HYPERLINK https://www.google.com.tr }}{\fldrslt{https://www.google.com.tr\ul0\cf0}}}}\f0\fs22 ";\par
+//newLink.target = "_blank";\par
+\par
+\par
+// Peki herhangi bir etiketin son \'e7ocu\f1\u287?u olarak yeni bir text eklemek istersek ne kullanaca\u287?\u305?z, textContent kesinlikle kullanmayaca\u287?\u305?z.Bunun yerine \f0\'f6ncelikle metin ekleyece\f1\u287?imizi varsayal\u305?m.Array\par
+\par
+// \f0\'f6ncelikle text node olu\f1\'baturup akabinde appendChild ile ekleme operasyonunu tamamlayabiliriz.Array\par
+\par
+//const text = document.createTextNode("Naber");\par
+\par
+//cardBody.appendChild(text);\par
+\par
+// yeni olu\'baturdu\u287?umuz linki cardBody'e son \f0\'e7ocuk olarak ekleme\par
+//cardBody.appendChild(newLink);\par
+\par
+\par
+//newLink.appendChild(document.createTextNode("Farkl\f1\u305? bir sayfaya git"));\par
+\par
+\par
+// D\u304?NAM\u304?K ELEMENT S\u304?LMEK\par
+\par
+\par
+//const todoList = document.querySelector("ul.list-group");\par
+//const todos = document.querySelectorAll("li.list-group-item");\par
+\par
+\par
+// Remove methodu\par
+// todos[0].remove(); // indexe g\f0\'f6re silme i\f1\'balemi yapmaktad\u305?r.\par
+\par
+// Remove Child \par
+\par
+// todoList.removeChild(todoList.lastElementChild); // node list i\f0\'e7erisinde yer alan son elementi sildik.\par
+// todoList.removeChild(todos[3]);\par
+\par
+// Elementleri birbirleri ile de\f1\u287?i\'batirmek\par
+\par
+//const cardBody = document.querySelectorAll(".card-body")[1]; // html i\f0\'e7erisinde yer alan ikinci card-body class\f1\u305?na sahip elementi se\f0\'e7tik.\par
+//const newElement = document.createElement("h3");\par
+\par
+// burda yapmak istedi\f1\u287?imiz card-body class\u305?na sahip elementin i\f0\'e7erisinde h5 etiketini yeni olu\f1\'baturdu\u287?umuz h3 elementi ile de\u287?i\'batirmek.\par
+\par
+//newElement.id = "tasks-title";\par
+// newElement.className = "card-title";\par
+// newElement.textContent = "Yeni Todolar";\par
+\par
+// eski Elementi se\f0\'e7elim.\par
+\par
+// const oldElement = document.querySelector("#tasks-title");\par
+\par
+// cardBody.replaceChild(newElement,oldElement);\par
+\par
+// Bir elementin attribute'\'fcn\'fc dinamik olarak de\f1\u287?i\'batirmek, silmek,  eklemek\par
+\par
+// const todoInput = document.getElementById("todo");\par
+// let element;\par
+\par
+//element = todoInput;\par
+\par
+//todoInput.classList.add("newClass"); // hali haz\u305?rda se\f0\'e7ilen elementin form-control ad\f1\u305?nda bir class\u305? vard\u305? \'baimdi onun yanina newClass eklendi.\par
+//todoInput.classList.add("newClass2") // yukar\u305?da eklenen yeni class\u305?n yan\u305?na bir yenisini daha ekledik.\par
+\par
+// eklenen class\u305? geri silelim.\par
+\par
+// todoInput.classList.remove("newClass2");\par
+\par
+// todoInput isimli se\f0\'e7ilen elementin placeholder'\f1\u305?n\u305? se\f0\'e7elim.\par
+//element.placeholder; // birinci y\'f6ntem\par
+// element.getAttribute("placeholder"); ikinci y\'f6ntem\par
+\par
+// hali haz\f1\u305?rda placeholder de\u287?erini de\u287?i\'batirmek istersek yapmam\u305?z gereken setAttribute'u kullanmam\u305?z gerekecek\par
+\par
+////todoInput.setAttribute("placeholder","Naber");\par
+\par
+// elemente yeni bir attribute ekleyelim.\par
+\par
+//todoInput.setAttribute("title","input"); \par
+\par
+// se\f0\'e7ilen elementtee herhangi bir attribute'un olup olmad\f1\u305?\u287?\u305?n\u305? kontrol etmek i\f0\'e7in\par
+\par
+// todoInput.hasAttribute("name")  // name attribute'u varsa  true yoksa false yani boolean bir de\f1\u287?er d\f0\'f6nmektedir.\par
+// Attribute kald\f1\u305?rmak\par
+\par
+// element.removeAttribute("name");  // name attribute'\u305? varsa \'ba\par
+\par
+// console.log(newLink);\par
+\par
+// DOM EVENTLER\u304?\par
+\par
+// Focus eventi\par
+const filterInput = document.getElementById("filter");\par
+// filterInput.addEventListener("focus",function(e)\{\par
+//     console.log(e);\par
+//     console.log(e.type);\par
+//     console.log(e.target); //event nerede olu\'bamu\'ba ise o elementi d\f0\'f6ner\par
+//     console.log(e.target.className); // eventin olu\f1\'batu\u287?u elementin class\u305?\par
+//     console.log(e.target.placeholder);  // placeholder'\u305?\par
+// \})\par
+\par
+\par
+const todoForm = document.getElementById("todo-form");\par
+\par
+// Submit eventi\par
+\par
+todoForm.addEventListener("submit",submitForm);\par
+\par
+ function submitForm(e)\{\par
+    console.log("form submit edildi.");\par
+    e.preventDefault(); // submit i\'baleminden sonra sayfa default olarak yenilenmektedir.Bu yenilenme olay\u305?n\u305? durdumak i\f0\'e7in kullan\f1\u305?l\u305?r.\par
+\par
+\par
+\}\par
+\par
+// Keyboard Eventleri\par
+\par
+// Keypress eventi taray\u305?c\u305?ya uyguland\u305?\u287?\u305?nda bas\u305?lan harfler ve say\u305? tu\'balar\u305?n\u305?n de\u287?erini console'a d\f0\'f6ner.\par
+document.addEventListener("keypress",run);\par
+\par
+function run(e)\{\par
+    console.log(e.key) // bas\f1\u305?lan tu\'bau d\f0\'f6nmektedir.\par
+\}\par
+\par
+\par
+\par
+// Keydown : keypress'den fark\f1\u305? capslock ve y\f0\'f6n tu\f1\'balar\u305? da dahil b\f0\'fct\'fcn tu\f1\'ba hareketlerini yakalar.\par
+\par
+// document.addEventListener("keydown",run);\par
+\par
+// function run(e)\{\par
+//     console.log(e.key) // bas\u305?lan her tu\'bau d\f0\'f6nmektedir.\par
+// \}\par
+\par
+\par
+// Keyup : T\f1\u305?\'baa bas\u305?ld\u305?\u287?\u305?nda de\u287?il tu\'ba b\u305?rak\u305?ld\u305?\u287?\u305?nda olu\'baan eventtir.\par
+\par
+\par
+ // Keyup eventini kullanarak inputtan veri almak\par
+\par
+// const header = document.querySelector(".card-header");\par
+// const todoInput = document.querySelector("#todo");\par
+\par
+// todoInput.addEventListener("keyup",changeText);\par
+\par
+// function changeText(e)\{\par
+\par
+//     header.textContent = e.target.value;\par
+//     console.log(e.target.value); // eventin olu\'batu\u287?u elementteki yani inputtaki t\f0\'fcm de\f1\u287?erleri al\u305?r. \par
+// \}\par
+\par
+\par
+// Mouse Eventleri\par
+\par
+const cardBody = document.querySelectorAll(".card-body");\par
+const title = document.querySelector("#tasks-title");\par
+\par
+// Click Eventi\par
+\par
+title.addEventListener("click",run);\par
+\par
+function run(e)\{\par
+    console.log(e.type); // element \f0\'fczerinde olu\f1\'baan eventin tipini d\f0\'f6ner.\par
+\}\par
+\par
+\par
+// Double Click Eventi : \'e7ift t\f1\u305?klama sonucu olu\'baan event\par
+\par
+title.addEventListener("dblclick",run);\par
+\par
+\par
+// Mouse Down eventi\par
+\par
+title.addEventListener("mousedown",run);\par
+\par
+\par
+// Mouse up eventi : mouse t\u305?kland\u305?ktan sonra tetiklenen event el \f0\'e7ekildi\f1\u287?inde.\par
+title.addEventListener("mouseup",run);\par
+\par
+\par
+// En \f0\'f6nemli ve en \'e7ok kullan\f1\u305?lan mouse eventi  MOUSE OVER\par
+\par
+// herhangi bir t\u305?klama olay\u305?na gerek kalmadan sadece mouse bir elementin \f0\'fczerine geldi\f1\u287?inde tetiklenecek eventtir.\par
+\par
+title.addEventListener("mouseover",run);\par
+\par
+\par
+// mouse element \f0\'fczerinden s\f1\u305?n\u305?rlar\u305?ndan \f0\'e7\f1\u305?kt\u305?\u287?\u305?nda olu\'baacak event Mouse Out Eventi\par
+\par
+title.addEventListener("mouseout",run);\par
+\par
+// MOUSEENTER MOUSELEAVE  eventleri \par
+\par
+// mouseEnter eventi mouseover'a  mouseleave ise mouseout'a benzemektedir. ancak mouse enter ve mouse leave daha tutarl\u305? \f0\'e7al\f1\u305?\'bamaktad\u305?r.\par
+\par
+title.addEventListener("mouseleave", run);\par
+\par
+title.addEventListener("mouseleave",run);\par
+\par
+\par
+//INPUt EVENTLER\u304?\par
+\par
+// DOMContentLoaded Eventi : Tary\u305?c\u305? \f0\'fczerinde yer alan sayfan\f1\u305?n tamamen y\f0\'fcklendikten sonra olu\f1\'baan eventi\par
+\par
+document.addEventListener("DOMContentLoaded",load);\par
+\par
+function load(e)\{\par
+    console.log("Sayfa Y\f0\'fcklendi.");\par
+\}\par
+\par
+// Focus EVENT\f1\u304? : inputa odaklan\u305?ld\u305?\u287?\u305? tetiklenecek event\par
+\par
+input.addEventListener("focus",run);\par
+// BLur eventi : input oda\u287?\u305?ndan \f0\'e7\f1\u305?k\u305?ld\u305?\u287?\u305?nda tetiklenecek event.\par
+input.addEventListener("blur",run);\par
+\par
+// Paste  : Yap\u305?\'bat\u305?rma eventi.\par
+\par
+// herhangi bir input alan\u305?a karakter yap\u305?\'bat\u305?r\u305?ld\u305?\u287?\u305?nda tetiklenecek event.\par
+\par
+\par
+title.addEventListener("paste", run);\par
+\par
+// Copy Eventi\par
+\par
+title.addEventListener("copy", run);\par
+// \u304?nput i\f0\'e7erisinden herhangi bir karakter kopyaland\f1\u305?\u287?\u305?nda tetiklenecek event.\par
+\par
+// Cut Eventi\par
+\par
+title.addEventListener("cut", run);\par
+// \u304?nput i\f0\'e7erisindeki herhangi bir karakter kesildi\f1\u287?inde tetiklenecek event\par
+\par
+title.addEventListener("select",run);\par
+// input i\f0\'e7erisinde herhagi bir karakter se\'e7ildi\f1\u287?inde tetiklenecek event.\par
+\par
+\par
+\par
+// TARAYICILARIN DEPOLAMA ALANLARI\par
+// SessionStorage'a kay\u305?t olan veriler  tary\u305?c\u305? kapat\u305?ld\u305?\u287?\u305? an silinir.\par
+\par
+// SessionStorage'a key ve value \'baeklinde eklemeler yapabiliriz\par
+\par
+sessionStorage.setItem(parametreKey.value, parametre2.value);\par
+\par
+// Veri silme\par
+sessionStorage.removeItem(parametreKey.value); // silinmek istenilen verinin key de\u287?erini vermek gerekiyor.\par
+\par
+// T\f0\'fcm sessionStorage'daki  verileri temizlemek\par
+sessionStorage.clear();\par
+\par
+// LOCAL STORAGE\par
+\par
+// localStorage'a eklenen veriler taray\f1\u305?c\u305? kapat\u305?ld\u305?ktan sonra da storage'da kalmaya devam ederler.ArrayKey ve value \'baeklinde veriler eklenir.\par
+\par
+//SET ITEM\par
+localStorage.setItem("hareket","burpee");\par
+localStorage.setItem("tekrar",50);  // localStorage'a number tipinde bir veri eklenmek istense bile otomatik olarak stringe \f0\'e7evrilir ve \'f6yle eklenir. \par
+\par
+\par
+// GET ITEM\par
+localStorage.getItem("tekrar"); // localStorage'dan veri listelenmek istenilirse, yap\f1\u305?lmas\u305? gereken hangi veri \f0\'e7ekilmek istenirse o verinin key de\f1\u287?erini getItem i\f0\'e7erisinde parametre olarak yazmak gerekmektedir.\par
+\par
+// getIrem kullan\f1\u305?larak \f0\'e7ekilmek istenilen anahtar veri e\f1\u287?er storage'da kay\u305?tl\u305? de\u287?ilse null olarak d\f0\'f6necektir.\par
+\par
+// CLEAR Local STORAGE\par
+\par
+localStorage.clear();\par
+\par
+// Local Storage'a array kaydetmek i\'e7in \par
+\par
+const todos = ["Todo1","Todo 2"];\par
+\par
+// Yukar\f1\u305?daki \'baekilde g\f0\'f6r\'fclece\f1\u287?i \f0\'fczere bu array\f1\u305? do\u287?rudan kaydetmek istersek string olarak tek anahtar de\u287?eriyle todo1 ve todo2'yi stringe \f0\'e7evirecek tek sat\f1\u305?ra set edecek\par
+// ancak bu bizim istedi\u287?imiz bir durum de\u287?il \f0\'e7\'fcnk\'fc array i\'e7erisinde iki farkl\f1\u305? string item var bunlar\u305?n ayr\u305? ayr\u305? sisteme kaydedilmesi gerekmektedir.\par
+\par
+// \f0\'d6nce arrayimizi json objeye \'e7evirmemiz gerekmektedir. Daha sonra ise anahtar de\f1\u287?eri ile birlikte setItem yap\u305?labilir.\par
+\par
+localStorage.setItem("todolar",JSON.stringify(todos));\par
+// Peki bu \'baekilde ekliyoruz ancak veri \f0\'e7ekmek istersek ne yapaca\f1\u287?\u305?z.\par
+\par
+const value = JSON.parse(localStorage.getItem("todolar")); \par
+// JSON.parse ile veriyi json ifadeden \f0\'e7\f1\u305?kar\u305?p arraya \f0\'e7eviriyoruz. \par
+// \'c7\'fcnk\'fc g\'f6nderirken JSON olarak kaydetmi\f1\'batik.\par
+\par
+// \'baimdi form \f0\'fczerinden girilen de\f1\u287?erleri localStorage'a ekleyelim.\par
+\par
+const form = document.getElementById("todo-form");\par
+const todoInput = document.getElementById("todo");\par
+\par
+form.addEventListener("submit",addTodo);\par
+\par
+function addTodo(e)\{\par
+    const value = todoInput.value;\par
+\par
+\par
+    let todos;\par
+\par
+    //ilk olarak kullan\u305?c\u305? taraf\u305?ndan input alan\u305?na girilen veri acaba localStorage'da kay\u305?tl\u305? m\u305? de\u287?ilmi, kay\u305?tl\u305? ise \f0\'fczerine inputa girilen de\f1\u287?eri ekleyece\u287?iz.\par
+    // e\u287?er hi\f0\'e7 yoksa bo\f1\'ba bir array olu\'baturup inputtan gelen de\u287?eri setleyip localStorage'a kaydedece\u287?iz.\par
+\par
+    if(localStorage.getItem("todos") === null)\{\par
+        todos = [];\par
+    \}else\{\par
+        todos = JSON.parse(localStorage.getItem("todos"));\par
+    \}\par
+    todos.push(value);\par
+    localStorage.setItem("todos",JSON.stringify(todos));\par
+\par
+\par
+    e.preventDefault(); // sayfan\u305?n yenilenmemesi i\f0\'e7in.\par
+\}\lang31\par
+}
+ 
