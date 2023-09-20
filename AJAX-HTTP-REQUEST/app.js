@@ -38,7 +38,7 @@ class Request{
         this.xhr.open("POST",url);
         this.xhr.setRequestHeader("Content-type","application/json"); // JSON verisi gönderileceği bildiriliyor.
         this.xhr.onload = () => {
-            if(this.xhr.status === 201){
+            if(this.xhr.status === 201){  // 201 Status Code : Created
                 callback(null,this.xhr.responseText);
             }else{
                 callback("Herhangi bir hata oluştu.",null);
@@ -47,7 +47,36 @@ class Request{
 
         this.xhr.send(JSON.stringify(data));// parametre olarak gelen yani gönderilecek veriyi JSON'a çevirdik.
     }
+    put(url,data,callback){
+        this.xhr.open("PUT",url);
+        this.xhr.setRequestHeader("Content-type","application/json");
 
+        this.xhr.onload = () => {
+            if(this.xhr.status === 200){
+                callback(null,this.xhr.responseText);
+            }
+            else
+            {
+                callback("Put Request :  bir hata oluştu",null);
+            }
+        }
+        this.xhr.send(JSON.stringify(data));
+    }
+    delete(url,callback){
+        this.xhr.open("DELETE",url);
+        
+
+        this.xhr.onload = () => {
+            if(this.xhr.status === 200){
+                callback(null,this.xhr.responseText);
+            }
+            else
+            {
+                callback("Put Request :  bir hata oluştu",null);
+            }
+        }
+        this.xhr.send(JSON.stringify(data));
+    }
 
 
 
@@ -91,3 +120,22 @@ const request = new Request();
 // });
 
 
+// request.put("https://jsonplaceholder.typicode.com/albums/10",{userId :2,title:"DenemeTest"},function(err,response){
+//     if(err === null){
+//         console.log(response);
+//     }
+//     else
+//     {
+//         console.log(err);
+//     }
+// });
+
+request.delete("https://jsonplaceholder.typicode.com/albums/10",{userId :2,title:"DenemeTest"},function(err,response){
+    if(err === null){
+        console.log(response);
+    }
+    else
+    {
+        console.log(err);
+    }
+});
